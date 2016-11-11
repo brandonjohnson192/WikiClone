@@ -1,0 +1,9 @@
+%h1 Article List
+
+- @articles.each do |article|
+  %h2= article.title
+  %p
+    Published at
+    = article.created_at.strftime('%b')
+
+= link_to "New Article", new_article_url
